@@ -1,42 +1,16 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Использование iframe</title>
-	<style>
-		.tag {
-		    color: navy;
-		}
-		.attribute {
-		    color: #e6550d;
-		}
-		figure {
-			margin: 20px 0;
-		}
-		iframe {
-			width: 100%;
-			height: 400px;
-			border: none;
-		}
-	</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Видео на странице</title>
 </head>
 <body>
-<h1>Добавление встроенных фреймов</h1>
-<p>Один из способов добавления содержимого на страницу — это внедрить другую HTML-страницу в текущую. Это делается с помощью встроенного фрейма или элемента <span class="tag">&lt;iframe&gt;</span>. Данный элемент принимает URL другой HTML-страницы в значении атрибута <span class="attribute">src</span>&nbsp;— это вызывает содержимое из внедрённой HTML-страницы для отображения на текущей странице. Значение атрибута <span class="attribute">src</span> может быть URL относительно страницы, где появляется элемент <span class="tag">&lt;iframe&gt;</span> или абсолютным адресом для исключительно внешней страницы.</p>
-<p>Многие страницы используют элемент <span class="tag">&lt;iframe&gt;</span> для внедрения медиа-контента на страницу с внешнего сайта, вроде Google Maps, YouTube и др.</p>
-
-<h2>Демонстрация добавления встроенного фрейма</h2>
-
-<figure>
-	<iframe src="https://vkvideo.ru/video-14435605_171586227" allowfullscreen></iframe>
-	<figcaption>Видео с VK</figcaption>
-</figure>
-
-<figure>
-	<iframe src="https://yandex.ru/maps/10/orel/?ll=36.056714%2C52.970138&z=17" allowfullscreen></iframe>
-	<figcaption>Карта с Яндекс.Карт</figcaption>
-</figure>
-
+    <h1>Видеоплеер</h1>
+    <video width="640" height="360" controls>
+        <source src="https://vk.com/video-14435605_171586227" type="video/mp4">
+        <source src="https://video.sibnet.ru/v/236e25f063a5347fdefe2c38cae282ff/2038198.mp4" type="video/mp4">
+        Ваш браузер не поддерживает видео.
+    </video>
 </body>
 </html>

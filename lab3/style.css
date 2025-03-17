@@ -1,4 +1,4 @@
-/* Основные цвета: белый текст на чёрном фоне */
+
 body {
     background-color: black;
     color: white;
@@ -6,24 +6,24 @@ body {
     line-height: 2rem;
 }
 
-/* Абзацы выравниваются справа */
+
 p {
     text-align: right;
 }
 
-/* Заголовки выравниваются справа и записываются рубленым шрифтом красного цвета */
+
 h1, h2 {
     text-align: right;
     font-family: Arial, sans-serif;
     color: red;
 }
 
-/* Термины, выделяемые курсивом, записываются зелёным цветом */
+
 em {
     color: green;
 }
 
-/* Обёртка с классом wrapper */
+
 .wrapper {
     max-width: 960px;
     margin-left: auto;

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Стили</title>
+    <!-- Подключение Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Подключение MathJax -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <!-- Подключение фавиконки -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <!-- Встроенные стили -->
+    <style>
+        /* Основные стили */
+        body {
+            background-color: #f4f4f4; /* Светло-серый фон */
+            color: #333; /* Тёмно-серый текст */
+            font-size: 1.5rem;
+            line-height: 2rem;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://www.toptal.com/designers/subtlepatterns/uploads/leaves.png'); /* Бесшовный фон */
+            background-repeat: repeat;
+        }
+
+        /* Абзацы выравниваются справа */
+        p {
+            text-align: right;
+        }
+
+        /* Заголовки с шрифтом Roboto и оранжевым цветом */
+        h1, h2 {
+            text-align: right;
+            font-family: 'Roboto', sans-serif;
+            color: #d35400; /* Оранжевый цвет */
+        }
+
+        /* Курсивные термины зелёного цвета */
+        em {
+            color: green;
+        }
+
+        /* Элемент strong с шрифтом Caveat */
+        strong {
+            font-family: 'Caveat', cursive;
+        }
+
+        /* Обёртка с классом wrapper */
+        .wrapper {
+            max-width: 960px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        /* Стили для article */
+        article {
+            border: 2px solid #bdc3c7; /* Серый цвет рамки */
+            border-radius: 15px; /* Скруглённые углы */
+            margin: 20px 0; /* Внешние отступы */
+            padding: 15px; /* Внутренние отступы */
+            background-color: rgba(255, 255, 255, 0.9); /* Полупрозрачный белый фон */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <article>
+            <h1>Приватные и публичные программы</h1>
+            <h2>Приватные программы</h2>
+            <p><em>Приватными программами</em> я называю те, которые будут использоваться только вами (их
+                разработчиками) или очень ограниченным кругом других людей, чьи навыки, требования и компьютеры хорошо
+                известны.</p>
+            <h2>Публичные программы</h2>
+            <p><em>Публичные программы</em> — прямая противоположность приватным. Они распространяются среди большого
+                числа людей.</p>
+            <p><strong>Лу Гринзоу</strong></p>
+        </article>
+        <hr>
+        <article>
+            <h1>Великая теорема Ферма</h1>
+            <p><b>Великая теорема Ферма́</b> (или <b>последняя теорема Ферма</b>)&nbsp;— одна из самых популярных теорем
+                математики. Сформулирована французским математиком Пьером Ферма в 1637 году. Несмотря на простоту
+                формулировки, буквально, на <q>школьном</q> арифметическом уровне, доказательство теоремы искали многие
+                математики на протяжении более трёхсот лет. И только в 1994 году теорема была доказана английским
+                математиком Эндрю Уайлсом с коллегами; публикация доказательства состоялась в 1995 году.
+            </p>
+            <h2>Формулировка</h2>
+            <p>Теорема утверждает, что для любого натурального числа \(n&gt;2\) уравнение
+                \[a^n + b^n = c^n\]
+                не имеет решений в целых ненулевых числах \(a, b, c.\)
+            </p>
+        </article>
+    </div>
+</body>
+
+</html>

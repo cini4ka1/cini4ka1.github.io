@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Раскрывающееся меню при наведении</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .menu {
+            width: 200px;
+            background: #fff;
+            padding: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .menu ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .menu li {
+            padding: 5px 0;
+            position: relative;
+        }
+        
+        .menu li a {
+            text-decoration: none;
+            color: #333;
+            display: block;
+            padding: 5px 10px 5px 30px; /* Отступ для иконки */
+            position: relative;
+        }
+        
+        .menu li a::before {
+            font-family: "Font Awesome 6 Free";
+            position: absolute;
+            left: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .menu li > a::before {
+            content: "\f111"; /* Код для circle-dot */
+        }
+        
+        .menu li:hover > a::before {
+            content: "\f146"; /* Код для square-minus при наведении */
+        }
+        
+        .menu li ul {
+            display: none; /* Скрываем вложенные списки по умолчанию */
+            padding-left: 20px;
+        }
+        
+        .menu li:hover ul {
+            display: block; /* Показываем вложенные списки при наведении */
+        }
+        
+        .menu li li a::before {
+            content: "\f111"; /* Код для circle-dot для вложенных элементов */
+        }
+    </style>
+</head>
+<body>
+    <nav class="menu">
+        <ul>
+            <li><a href="#">Фильмы</a>
+                <ul>
+                    <li><a href="#">Экшн</a></li>
+                    <li><a href="#">Мелодрамы</a></li>
+                    <li><a href="#">Сериалы</a></li>
+                    <li><a href="#">Семейные</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Музыка</a>
+                <ul>
+                    <li><a href="#">Классика</a></li>
+                    <li><a href="#">Джаз</a></li>
+                    <li><a href="#">Рок</a></li>
+                    <li><a href="#">Грандж</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Софт</a>
+                <ul>
+                    <li><a href="#">Графика</a></li>
+                    <li><a href="#">3D-моделирование</a></li>
+                    <li><a href="#">Машинопись</a></li>
+                    <li><a href="#">Переводчики</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Игры</a>
+                <ul>
+                    <li><a href="#">РПГ</a></li>
+                    <li><a href="#">Шутеры</a></li>
+                    <li><a href="#">Пасьянсы</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>

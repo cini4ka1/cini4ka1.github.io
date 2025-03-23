@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Меню с CSS спрайтом</title>
+    <style>
+        .menu {
+            width: 200px;
+            background: #fff;
+            padding: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .menu ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .menu li {
+            padding: 5px 0;
+            position: relative;
+        }
+        
+        .menu li a {
+            text-decoration: none;
+            color: #333;
+            display: block;
+            padding: 5px 10px 5px 30px; /* Отступ для иконки */
+            position: relative;
+        }
+        
+        .menu li a::before {
+            content: "";
+            position: absolute;
+            left: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            background: url('cini4ka1/cini4ka1.github.io/lab4/spritesheet.png') no-repeat;
+        }
+        
+        .menu li:nth-child(1) a::before {
+            background-position: 0 0; /* Позиция первой иконки в спрайте */
+        }
+        
+        .menu li:nth-child(2) a::before {
+            background-position: -30px 0; /* Позиция второй иконки в спрайте */
+        }
+        
+        .menu li:nth-child(3) a::before {
+            background-position: -60px 0; /* Позиция третьей иконки в спрайте */
+        }
+        
+        .menu li:nth-child(4) a::before {
+            background-position: -90px 0; /* Позиция четвертой иконки в спрайте */
+        }
+    </style>
+</head>
+<body>
+    <nav class="menu">
+        <ul>
+            <li><a href="#">Фильмы</a></li>
+            <li><a href="#">Музыка</a></li>
+            <li><a href="#">Софт</a></li>
+            <li><a href="#">Игры</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

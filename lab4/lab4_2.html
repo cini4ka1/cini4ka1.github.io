@@ -6,6 +6,7 @@
     <style>
         html {
             background: #f0f0f0;
+            font-family: Arial, sans-serif;
         }
         
         .menu {
@@ -23,6 +24,7 @@
         
         .menu li {
             padding: 5px 0;
+            position: relative;
         }
         
         .menu li a {
@@ -42,12 +44,30 @@
             display: none;
         }
         
-        .menu li:hover ul {
+        .menu li.active ul {
             display: block;
         }
         
         .menu li li {
             padding: 2px 0;
+        }
+        
+        .menu li > a::before {
+            content: "•";
+            margin-right: 10px;
+        }
+        
+        .menu li.active > a::before {
+            content: "-";
+        }
+        
+        .menu li > a::after {
+            content: "+";
+            float: right;
+        }
+        
+        .menu li.active > a::after {
+            content: "-";
         }
     </style>
 </head>
@@ -87,5 +107,15 @@
             </li>
         </ul>
     </nav>
+
+    <script>
+        document.querySelectorAll('.menu li > a').forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                const parentLi = this.parentElement;
+                parentLi.classList.toggle('active');
+            });
+        });
+    </script>
 </body>
 </html>
